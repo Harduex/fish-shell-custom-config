@@ -19,7 +19,7 @@ $ chsh -s $(which fish)
 
 # Run Fish Shell
 ```console
-> fish
+$ fish
 ```
 
 # Remove Greeting
@@ -60,18 +60,18 @@ $ chsh -s $(which fish)
 # Inside fish_prompt.fish:
 # for user (default bash theme):
 
-```console
+```bash
 function fish_prompt -d "Write out the prompt"
     printf (set_color green --bold)'%s@%s'(set_color normal)':%s%s%s$ ' $USER $hostname \
             (set_color blue --bold) (prompt_pwd) (set_color normal)
-            end
+end
 ```
 
 # for root (clean):
-```console
+```bash
 function fish_prompt -d "Write out the prompt"
     printf (set_color normal --bold)'%s@%s'(set_color normal)':%s%s%s# ' $USER $hostname \
                 (set_color normal --bold) (prompt_pwd) (set_color normal)
-                end
+end
 ```
 # repeat again for every user you want to setup

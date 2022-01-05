@@ -58,7 +58,7 @@ $ fish
 ```
 
 # Inside fish_prompt.fish:
-# for user (default bash theme):
+## for user (default bash theme):
 
 ```bash
 function fish_prompt -d "Write out the prompt"
@@ -67,7 +67,7 @@ function fish_prompt -d "Write out the prompt"
 end
 ```
 
-# for root (clean):
+## for root (clean):
 ```bash
 function fish_prompt -d "Write out the prompt"
     printf (set_color normal --bold)'%s@%s'(set_color normal)':%s%s%s# ' $USER $hostname \

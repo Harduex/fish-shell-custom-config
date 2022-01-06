@@ -58,7 +58,7 @@ $ fish
 ```
 
 # Inside fish_prompt.fish:
-## for user (default bash theme):
+## 1) for user (default bash theme):
 
 ```bash
 function fish_prompt -d "Write out the prompt"
@@ -67,11 +67,16 @@ function fish_prompt -d "Write out the prompt"
 end
 ```
 
-## for root (clean):
+## 2) for root (clean):
 ```bash
 function fish_prompt -d "Write out the prompt"
     printf (set_color normal --bold)'%s@%s'(set_color normal)':%s%s%s# ' $USER $hostname \
                 (set_color normal --bold) (prompt_pwd) (set_color normal)
 end
 ```
+## 3) alternatively, you can use web interface and config
+```console
+> fish_config
+```
+
 # repeat again for every user you want to setup
